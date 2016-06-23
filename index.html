@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hamzah's Portifolio</title>
-
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
@@ -16,7 +15,6 @@
 
 <body>
     <div class="container">
-
         <div class="row">
             <div class="col-xs-3 col-sm-4 col-md-6 title-logo">
                 <img src="src/images/hamzahs-logo.jpg" alt="Udacity logo" class="img-responsive">
@@ -26,26 +24,27 @@
                 <h4>Front-End Web Developer</h4>
             </div>
         </div>
-
         <div class="row">
             <hr>
         </div>
-        <!--
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <img src="http://placekitten.com/1100/400" alt="kitten picture" class="img-responsive img-thumbnail">
-            </div>
+        <div class="center-block">
+            <h2 class="">About Me</h2>
+            <p class="lead text-center">
+                I am a front end web developer with experience in responsive design, rendering optimization, web development best practices and problem solving.
+            </p>
+            <p class="display-3 black"><strong>
+                During my undergraduate years, I enjoyed applying the concepts I learned in simulations which involved using legacy codes with minor relevance in today's world. After starting to learn web development to expand my skill-set, I found a place that can satisfy my drive to constantly learn in a dynamically changing world with an open-source development environment.
+            </strong>
+            </p>
+            <br>
         </div>
-         -->
-
+        <hr>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <h2 class="text-muted">Featered Work</h2>
             </div>
         </div>
-
         <div ng-controller='ProjectsList' class='container-fluid'>
-
             <div class="row customSize item">
                 <div class="col-xs-12 col-sm-12 col-md-6" ng-repeat='project in projects'>
                     <img ng-src={{project.image}} alt={{project.name}} class="img-responsive center-block img-thumbnail">
@@ -53,33 +52,85 @@
                     <a class="thick" ng-href={{project.githubLink}} target='_blank'>Github link</a>
                 </div>
             </div>
-
         </div>
-
-
-
         <div class="footer">
             <div class="container">
-                <div class="row">
-                    <h3 class="text-center">Contact Me</h3>
+                <div class="row ">
+                    <h3 class="text-center">Contact me @ hamzah.awn@berkeley.edu</h3>
                 </div>
-
-
                 <div id="contacts" class="add-top text-center">
                     <a href="https://github.com/Awnallah" target="_blank"><i class="fa fa-github fa-3x"></i></a>
                     <a href="https://www.linkedin.com/in/awnallah" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a>
                 </div>
+                <section class="contact content-section full-pg-bg" id="contact">
+                    <div class="contact-section-container">
+                      <div class="row">
+
+                <form  action="https://postmail.invotes.com/send"
+                    method="post" id="email_form" class="contact-form text-center">
+                    <div class="form-row form-group">
+                    <input type="text" name="subject" class="input" size="25" placeholder="Subject" />
+                </div>
+
+                <div class="form-row form-group">
+                     <input type="text" name="reply_to" class="input" size="25"
+                                placeholder="Your Email" />
+                    </div>
+
+
+                <div class="form-row form-group">
+                    <textarea name="text" class="input" rows="7" cols="25" placeholder="Message"></textarea>
+                </div>
+                <div class="form-row form-group">
+                    <input class="input" type="hidden" name="access_token" value="0gpgtxb3r7y5dv3bb320c454" />
+                      <!-- return urls can be fully qualified -OR-
+                         start with / for root relative -OR-
+                         start with . for url relative -->
+                   <!--  <input class="input" type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
+                    <input class="input" type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" /> -->
+                </div>
+
+
+                    <!-- set the reply-to address -->
+
+
+                    <!-- to append extra fields, use the extra_ prefix.
+                        Entries will be appended to your message body. -->
+                    <!-- <input type="text" name="extra_phone_number"
+                                placeholder="Phone Number" /> -->
+
+                    <!-- to split your message into 160 chars
+                         for an sms gateway -->
+                    <!-- <input type="hidden"
+                                name="sms_format" value="true" /> -->
+
+                    <input class="submit-button" id="submit_form" type="submit" value="Send" />
+                    <!-- Powered by postmail.invotes.com -->
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+<!-- optional, prevents the submit button from being pressed more than once -->
+<script>
+    var submitButton = document.getElementById("submit_form");
+    var form = document.getElementById("email_form");
+    form.addEventListener("submit", function (e) {
+        setTimeout(function() {
+            submitButton.value = "Sending...";
+            submitButton.disabled = true;
+        }, 1);
+    });
+</script>
+
+
 
 
                 <p>&copy; Develop with Hamzah. </p>
-
             </div>
         </div>
-
-
-
     </div>
-
     <!-- Angular link -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
     <script type="text/javascript" src='src/js/app.js'></script>

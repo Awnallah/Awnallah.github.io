@@ -24,11 +24,10 @@ angular.module('portfolio', [])
                           githubLink:'https://github.com/Awnallah/frontend-nanodegree-mobile-portfolio'
                         },
                         {
-                          name:'Running Map',
-                          image: 'src/images/map.png',
-                          category: 'mains',
-                          link:'http://awnallah.github.io/MapProject/',
-                          githubLink:'https://github.com/Awnallah/MapProject'
+                          name:'Online Resume',
+                          image: 'src/images/resume.png',
+                          link:'http://awnallah.github.io/resume/',
+                          githubLink:'https://github.com/Awnallah/resume'
                         }
 
                         ];
