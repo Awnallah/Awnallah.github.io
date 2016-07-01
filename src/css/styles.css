@@ -20,10 +20,6 @@ div.item {
     width: auto;
     height: 310px;
 }
-.mainImg{
-  width: 900px;
-  height: auto;
-}
 .thick:hover{
   font-weight: bold;
 }
