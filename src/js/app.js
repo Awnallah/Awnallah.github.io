@@ -22,7 +22,7 @@ angular.module('portfolio', [])
                         {
                           name:'Website Optimization',
                           image: 'src/images/optimize.png',
-                          link:'http://awnallah.github.io/frontend-nanodegree-mobile-portfolio/',
+                          link:'https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fawnallah.github.io%2Ffrontend-nanodegree-mobile-portfolio%2F&tab=mobile',
                           githubLink:'https://github.com/Awnallah/frontend-nanodegree-mobile-portfolio',
                           skills:['Develpor Tools', 'critical rendering path', '60FPS rendering']
                         },
